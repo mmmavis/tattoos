@@ -24,11 +24,16 @@ firebase.auth().onAuthStateChanged(function(user) {
     // var uid = user.uid;
     // console.log("user");
 
-    renderAllNotes(function() {
-      setTimeout(function() {
-        $("#inner-wrapper").append(createHTML({},"new-note-template"));
-      }, ANIMATION_DELAY);
-    });
+    setTimeout(function () {
+      $("body").removeClass("taken-over");
+      $("#screen-takeover").fadeOut(500);
+
+      renderAllNotes(function() {
+        setTimeout(function() {
+          $("#inner-wrapper").append(createHTML({},"new-note-template"));
+        }, ANIMATION_DELAY);
+      });
+    }, 1500);
   } else {
     // User is signed out.
     // console.log("out");
@@ -141,7 +146,7 @@ function sensorSwearWord(word) {
 
   for (var i = 0; i < word.length; i++) {
     var char = word.charAt(i);
-    var shouldSensor = Math.random() < 0.45;
+    var shouldSensor = Math.random() < 0.4;
     console.log(char);
 
     if ( char == " " || !shouldSensor ) {
