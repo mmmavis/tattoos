@@ -137,6 +137,7 @@ function sensorSwearWord(word) {
   if (!word) return null;
 
   var sensored = "";
+  var mask = "#$%^&*";
 
   for (var i = 0; i < word.length; i++) {
     var char = word.charAt(i);
@@ -146,7 +147,7 @@ function sensorSwearWord(word) {
     if ( char == " " || !shouldSensor ) {
       sensored += char;
     } else {
-      sensored += '*';
+      sensored = sensored + mask[Math.floor(Math.random() * mask.length)] ;
     }
   }
 
