@@ -146,7 +146,7 @@ function sensorSwearWord(word) {
 
   for (var i = 0; i < word.length; i++) {
     var char = word.charAt(i);
-    var shouldSensor = Math.random() < 0.4;
+    var shouldSensor = Math.random() < 0.35;
     console.log(char);
 
     if ( char == " " || !shouldSensor ) {
