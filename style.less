@@ -100,12 +100,55 @@ button {
     font-weight: 300;
     font-size: 50px;
     margin: @margin;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px @head-glow, 0 0 35px @head-glow, 0 0 40px @head-glow, 0 0 50px @head-glow, 0 0 75px @head-glow;
+    // text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px @head-glow, 0 0 35px @head-glow, 0 0 40px @head-glow, 0 0 50px @head-glow, 0 0 75px @head-glow;
+
+    color: #FBB4FF;
+      text-shadow:
+    -.1vw 0vw .25vw #FBB4FF, -.2vw 0vw .25vw #FBB4FF, -.4vw 0vw .25vw #FBB4FF,
+    -.1vw 0vw 1vw #E82FF5, -.2vw 0vw .8vw #E82FF5, -.4vw 0vw .8vw #E82FF5, .2vw 0vw .5vw #E82FF5,
+    -.1vw 0vw 10vw #CB16FA, -.2vw 0vw 10vw #CB16FA, -.4vw 0vw 10vw #CB16FA;
+
+    animation: heart .1s ease infinite;
+    -moz-animation: heart .1s ease infinite;
+    /* Firefox */
+    -webkit-animation: heart .1s ease infinite;
+    /* Safari and Chrome */
+    -o-animation: heart .1s ease infinite;
+    /* Opera */
 
     @media (min-width: 768px) {
       font-size: 120px;
     }
 
+    @keyframes heart {
+      0%,
+      100% {
+        /* Enable hardware acceleration to fix laggy transitions */
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        color: #FBB4FF;
+        text-shadow:
+      -.1vw 0vw .25vw #FBB4FF, -.2vw 0vw .25vw #FBB4FF, -.4vw 0vw .25vw #FBB4FF,
+      -.1vw 0vw 1vw #E82FF5, -.2vw 0vw .8vw #E82FF5, -.4vw 0vw .8vw #E82FF5, .2vw 0vw .5vw #E82FF5,
+      -.1vw 0vw 10vw #CB16FA, -.2vw 0vw 10vw #CB16FA, -.4vw 0vw 10vw #CB16FA;
+      }
+      50% {
+        /* Enable hardware acceleration to fix laggy transitions */
+       -webkit-transform: translateZ(0);
+       -moz-transform: translateZ(0);
+       -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        color: #8F5493;
+        text-shadow:
+      -.1vw 0vw .25vw #8F5493, -.2vw 0vw .25vw #8F5493, -.4vw 0vw .25vw #8F5493,
+      -.1vw 0vw .8vw #59125E, -.2vw 0vw .8vw #59125E, -.4vw 0vw .8vw #59125E, .2vw 0vw .5vw #59125E,
+      -.1vw 0vw 3vw #42114E, -.2vw 0vw 3vw #42114E, -.4vw 0vw 3vw #42114E;
+      }
+    }
   }
 
   h2 {
@@ -115,7 +158,7 @@ button {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px @subhead-glow, 0 0 35px @subhead-glow, 0 0 40px @subhead-glow, 0 0 50px @subhead-glow, 0 0 75px @subhead-glow;
 
     @media (min-width: 768px) {
-      font-size: 60px;
+      font-size: 50px;
     }
   }
 }
