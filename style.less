@@ -31,6 +31,10 @@ body {
     background-position: left bottom;
     background-attachment: fixed;
   }
+
+  &.taken-over {
+    overflow: hidden;
+  }
 }
 
 * {
@@ -44,17 +48,19 @@ img {
 
 input,
 textarea {
-  border: 0;
   padding: 5px;
   width: 100%;
   margin-bottom: 10px;
-  background: fade(white, 50%);
+  background: transparent;
+  border: 1px solid white;
   border-radius: @border-radius;
   font-family: Arial;
   font-size: inherit;
+  color: white;
 
   &::placeholder {
     font: normal x-small verdana,arial,helvetica,sans-serif;
+    color: #ccc;
   }
 }
 
