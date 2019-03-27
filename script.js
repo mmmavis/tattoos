@@ -25,8 +25,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     // console.log("user");
 
     setTimeout(function () {
-      $("body").removeClass("taken-over");
-      $("#screen-takeover").fadeOut(500);
+      $("#screen-takeover").fadeOut(500, function() {
+        $("body").removeClass("taken-over");
+      });
 
       renderAllNotes(function() {
         setTimeout(function() {
