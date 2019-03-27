@@ -43,8 +43,8 @@
           {{/if}}
           <div>
             <p class="message">{{{message}}}</p>
-            {{#if sensoredFaveSwearWord}}
-            <p class="fave-swear-word" data-swear="{{{faveSwearWord}}}">{{sensoredFaveSwearWord}}</p>
+            {{#if censoredFaveSwearWord}}
+            <p class="fave-swear-word" data-swear="{{{faveSwearWord}}}">{{censoredFaveSwearWord}}</p>
             {{/if}}
             <div class="submitter">
               <div>— {{submitter}}</div>
@@ -67,7 +67,7 @@
           </div>
           <div>
             <input name="faveSwearWord" type="text" placeholder="(optional) fave swear word or phrase" />
-            <small>it will be (somewhat) auto sensored when displayed</small>
+            <small>it will be (somewhat) auto censored when displayed</small>
           </div>
           <div>
             <input name="submitter" type="text" placeholder="your name" required />

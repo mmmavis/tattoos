@@ -139,27 +139,27 @@ function renderNote(note) {
   $("#inner-wrapper").append(createHTML(note,"note-template"));
 }
 
-function sensorSwearWord(word) {
+function censorSwearWord(word) {
   if (!word) return null;
 
-  var sensored = "";
+  var censored = "";
   var mask = "#$%^&*";
 
   for (var i = 0; i < word.length; i++) {
     var char = word.charAt(i);
-    var shouldSensor = Math.random() < 0.35;
+    var shouldcensor = Math.random() < 0.35;
     console.log(char);
 
-    if ( char == " " || !shouldSensor ) {
-      sensored += char;
+    if ( char == " " || !shouldcensor ) {
+      censored += char;
     } else {
-      sensored = sensored + mask[Math.floor(Math.random() * mask.length)] ;
+      censored = censored + mask[Math.floor(Math.random() * mask.length)] ;
     }
   }
 
-  console.log(sensored);
+  console.log(censored);
 
-  return sensored;
+  return censored;
 }
 
 // send new note
@@ -173,7 +173,7 @@ $("body").on("submit", "#new-note-form", function(event) {
     submitter: $(this).find("[name=submitter]").val(),
     imgSrc: $(this).find("[name=imgSrc]").val(),
     faveSwearWord: $(this).find("[name=faveSwearWord]").val(),
-    sensoredFaveSwearWord: sensorSwearWord($(this).find("[name=faveSwearWord]").val()),
+    censoredFaveSwearWord: censorSwearWord($(this).find("[name=faveSwearWord]").val()),
     textColor: null
   }, function complete() {
       // reload page so new notes shows... a cheat...
