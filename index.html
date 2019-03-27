@@ -15,7 +15,7 @@
     <meta property="og:image:type" content="image/png" />
     <link rel="apple-touch-icon" type="image/png" sizes="360x360" href="favicon-on-white.png">
     <link rel="icon" type="image/png" sizes="90x90" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300|Miltonian+Tattoo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
     <link rel="stylesheet/less" type="text/css" href="style.less" />
     <script type="text/javascript" src="lib/less.min.js" ></script>
     <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
@@ -44,7 +44,7 @@
           <div>
             <p class="message">{{{message}}}</p>
             {{#if censoredFaveSwearWord}}
-            <p class="fave-swear-word" data-swear="{{{faveSwearWord}}}">{{censoredFaveSwearWord}}</p>
+            <p class="fave-swear-word" data-swear="{{{faveSwearWord}}}">fave swear words: <span>{{censoredFaveSwearWord}}</span></p>
             {{/if}}
             <div class="submitter">
               <div>— {{submitter}}</div>
@@ -90,7 +90,7 @@
       </div>
       <div id="right">
         <div class="main-illustration">
-          <img src="assets/side-illustrations.png" class="mobile-intro-illustration" />
+          <img src="assets/side-illustrations.png" />
         </div>
         <div id="inner-wrapper"></div>
       </div>

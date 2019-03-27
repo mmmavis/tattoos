@@ -9,6 +9,7 @@
 
 @head-glow: #ff1177;
 @subhead-glow: #faed27;
+@swear-glow: #4d4dff;
 
 html,
 body {
@@ -325,10 +326,12 @@ button {
   }
 
   .fave-swear-word {
-    font-size: 18px;
-    font-family: 'Miltonian Tattoo', cursive;
-    text-align: right;
-    margin-bottom: 5px;
+    span {
+      font-size: 110%;
+      font-family: 'Oswald', sans-serif;
+      font-style: italic;
+      text-shadow: 0 0 1px darken(@swear-glow, 30%), 0 0 2px darken(@swear-glow, 30%), 0 0 3px darken(@swear-glow, 30%), 0 0 4px @swear-glow, 0 0 7px @swear-glow, 0 0 8px @swear-glow, 0 0 10px @swear-glow;
+    }
   }
 
   .submitter {

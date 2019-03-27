@@ -48,7 +48,6 @@ Handlebars.registerHelper("localTime", function(timestamp) {
 function renderAllNotes(done) {
   firebase.database().ref(FIREBASE_DB_PATH).once('value').then(function(snapshot) {
     var notes = snapshot.val();
-    console.log(notes);
     var numNotes = Object.keys(notes).length;
     var currIndex = 0;
 
