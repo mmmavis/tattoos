@@ -142,11 +142,11 @@ function censorSwearWord(word) {
   if (!word) return null;
 
   var censored = "";
-  var mask = "#$%^&*";
+  var mask = "#$%^&*!";
 
   for (var i = 0; i < word.length; i++) {
     var char = word.charAt(i);
-    var shouldCensor = Math.random() < 0.35;
+    var shouldCensor = Math.random() < 0.3;
 
     if (shouldCensor && char != " ") {
       censored = censored + mask[Math.floor(Math.random() * mask.length)] ;
