@@ -146,17 +146,14 @@ function censorSwearWord(word) {
 
   for (var i = 0; i < word.length; i++) {
     var char = word.charAt(i);
-    var shouldcensor = Math.random() < 0.35;
-    console.log(char);
+    var shouldCensor = Math.random() < 0.35;
 
-    if ( char == " " || !shouldcensor ) {
-      censored += char;
-    } else {
+    if (shouldCensor && char != " ") {
       censored = censored + mask[Math.floor(Math.random() * mask.length)] ;
+    } else {
+      censored += char;
     }
   }
-
-  console.log(censored);
 
   return censored;
 }
